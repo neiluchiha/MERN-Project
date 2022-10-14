@@ -9,6 +9,7 @@ import UserProfilePage from "./pages/user/UserProfilePage";
 import UserOrdersPage from "./pages/user/UserOrdersPage";
 import UserOrderDetailsPage from "./pages/user/UserOrderDetailsPage";
 import UserCartDetailsPage from "./pages/user/UserCartDetailsPage";
+import ProtectedRoutesComponents from "./pages/user/components/ProtectedRoutesComponent";
 
 
 function App() {
@@ -23,11 +24,16 @@ function App() {
     <Route path="/product-details" element={<ProductDetailsPage/>} /> 
     <Route path="/product-details/:id" element={<ProductDetailsPage/>} />
     <Route path="*" element="Page Not Found"/>
+
+    <Route element={<ProtectedRoutesComponents/>}>
     <Route path="/user" element={<UserProfilePage/>} />
     <Route path="/user/my-orders" element={<UserOrdersPage/>} />
     <Route path="/user/order-details" element={<UserOrderDetailsPage/>} />
     <Route path="/user/cart-details" element={<UserCartDetailsPage/>}/>
-  </Routes>
+    </Route>
+    
+    </Routes>
+
   </BrowserRouter>
   );
 }
