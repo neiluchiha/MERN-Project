@@ -9,7 +9,15 @@ import UserProfilePage from "./pages/user/UserProfilePage";
 import UserOrdersPage from "./pages/user/UserOrdersPage";
 import UserOrderDetailsPage from "./pages/user/UserOrderDetailsPage";
 import UserCartDetailsPage from "./pages/user/UserCartDetailsPage";
-import ProtectedRoutesComponents from "./pages/user/components/ProtectedRoutesComponent";
+import ProtectedRoutesComponents from "./components/ProtectedRoutesComponent";
+import AdminAnalyticsPage from "./pages/admin/AdminAnalyticsPage";
+import AdminChatsPage from "./pages/admin/AdminChatsPage";
+import AdminCreateProductPage from "./pages/admin/AdminCreateProductPage";
+import AdminEditProductPage from "./pages/admin/AdminEditProductPage";
+import AdminEditUserPage from "./pages/admin/AdminEditUserPage";
+import AdminOrderDetailsPage from "./pages/admin/AdminOrderDetailsPage";
+import AdminProductsPage from "./pages/admin/AdminProductsPage";
+import AdminUsersPage from "./pages/admin/AdminUsersPage";
 
 
 function App() {
@@ -24,14 +32,24 @@ function App() {
     <Route path="/product-details" element={<ProductDetailsPage/>} /> 
     <Route path="/product-details/:id" element={<ProductDetailsPage/>} />
     <Route path="*" element="Page Not Found"/>
-
-    <Route element={<ProtectedRoutesComponents/>}>
+          {/* {User Protected Pages} */}
+    <Route element={<ProtectedRoutesComponents admin={false}/>} >
     <Route path="/user" element={<UserProfilePage/>} />
     <Route path="/user/my-orders" element={<UserOrdersPage/>} />
     <Route path="/user/order-details" element={<UserOrderDetailsPage/>} />
     <Route path="/user/cart-details" element={<UserCartDetailsPage/>}/>
     </Route>
-    
+          {/* { Admin Protected Routes} */}
+    <Route element={<ProtectedRoutesComponents admin={true}/>} >
+    <Route path="/admin/analytics" element={<AdminAnalyticsPage/>}/>
+    <Route path="/admin/chats" element={<AdminChatsPage/>}/>
+    <Route path="/admin/create-new-product" element={<AdminCreateProductPage/>}/>
+    <Route path="/admin/edit-product" element={<AdminEditProductPage/>}/>
+    <Route path="/admin/edit-user" element={<AdminEditUserPage/>}/>
+    <Route path="/admin/order-details" element={<AdminOrderDetailsPage/>}/>
+    <Route path="/admin/products" element={<AdminProductsPage/>} />
+    <Route path="/admin/users" element={<AdminUsersPage/>} />
+    </Route>
     </Routes>
 
   </BrowserRouter>
