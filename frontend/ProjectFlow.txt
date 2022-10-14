@@ -1,0 +1,14 @@
+1) React Installation
+2) Pages -
+   i)  "pages" folder created.
+   ii) Under "pages" folder files created : CartPage, HomePage, LoginPage, ProductDetailsPage, ProductListingPage, RegisterPage.
+   iii) Routes added to App.js for new created pages.
+   
+   iv) "user" folder created
+   v) under "user" folder files created: UserCartDetailsPage, UserOrderDetailsPage, UserOrdersPage, UserProfilePage
+   vi)Routes created for newly created files in "App.js".
+   vii) Route "ProtectedRoutesComponents" added for users page. Unable to access user pages if the user is not logged in
+
+   viii)"components" folder created under "user" folder
+   ix)"ProtectedRoutesComponents.js" file created & authentication code added.
+   x) <outlet> - Routes added between <ProtectedRoutesComponents> are called Outlet.
