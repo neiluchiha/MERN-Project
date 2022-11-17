@@ -1,3 +1,13 @@
+/*Components*/
+
+import HeaderComponent from "./components/HeaderComponent";
+import FooterComponent from "./components/FooterComponent";
+
+
+/*User Components */ 
+import RoutesWithUserChatComponent from "./components/user/RoutesWithChatComponent";
+
+/*Publicaly Available Routes*/
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 import CartPage from "./pages/CartPage";
 import LoginPage from "./pages/LoginPage";
@@ -20,10 +30,13 @@ import AdminProductsPage from "./pages/admin/AdminProductsPage";
 import AdminUsersPage from "./pages/admin/AdminUsersPage";
 
 
+
 function App() {
   return (
   <BrowserRouter>
+  <HeaderComponent/>
   <Routes>
+    <Route element={<RoutesWithUserChatComponent/>}>
     <Route path="/" element={<HomePage/>} />
     <Route path="/cart" element={<CartPage/>} />
     <Route path="/login" element={<LoginPage/>} />
@@ -32,6 +45,7 @@ function App() {
     <Route path="/product-details" element={<ProductDetailsPage/>} /> 
     <Route path="/product-details/:id" element={<ProductDetailsPage/>} />
     <Route path="*" element="Page Not Found"/>
+    </Route>
           {/* {User Protected Pages} */}
     <Route element={<ProtectedRoutesComponents admin={false}/>} >
     <Route path="/user" element={<UserProfilePage/>} />
@@ -39,6 +53,8 @@ function App() {
     <Route path="/user/order-details" element={<UserOrderDetailsPage/>} />
     <Route path="/user/cart-details" element={<UserCartDetailsPage/>}/>
     </Route>
+    
+    
           {/* { Admin Protected Routes} */}
     <Route element={<ProtectedRoutesComponents admin={true}/>} >
     <Route path="/admin/analytics" element={<AdminAnalyticsPage/>}/>
@@ -50,8 +66,8 @@ function App() {
     <Route path="/admin/products" element={<AdminProductsPage/>} />
     <Route path="/admin/users" element={<AdminUsersPage/>} />
     </Route>
-    </Routes>
-
+  </Routes>
+<FooterComponent/>
   </BrowserRouter>
   );
 }
