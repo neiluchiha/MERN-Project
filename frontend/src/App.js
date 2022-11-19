@@ -2,6 +2,9 @@
 
 import HeaderComponent from "./components/HeaderComponent";
 import FooterComponent from "./components/FooterComponent";
+
+
+/*User Components */ 
 import RoutesWithUserChatComponent from "./components/user/RoutesWithChatComponent";
 
 /*Publicaly Available Routes*/
@@ -42,6 +45,7 @@ function App() {
     <Route path="/product-details" element={<ProductDetailsPage/>} /> 
     <Route path="/product-details/:id" element={<ProductDetailsPage/>} />
     <Route path="*" element="Page Not Found"/>
+    </Route>
           {/* {User Protected Pages} */}
     <Route element={<ProtectedRoutesComponents admin={false}/>} >
     <Route path="/user" element={<UserProfilePage/>} />
@@ -49,7 +53,7 @@ function App() {
     <Route path="/user/order-details" element={<UserOrderDetailsPage/>} />
     <Route path="/user/cart-details" element={<UserCartDetailsPage/>}/>
     </Route>
-    </Route>
+    
     
           {/* { Admin Protected Routes} */}
     <Route element={<ProtectedRoutesComponents admin={true}/>} >
@@ -62,7 +66,7 @@ function App() {
     <Route path="/admin/products" element={<AdminProductsPage/>} />
     <Route path="/admin/users" element={<AdminUsersPage/>} />
     </Route>
-    </Routes>
+  </Routes>
 <FooterComponent/>
   </BrowserRouter>
   );
