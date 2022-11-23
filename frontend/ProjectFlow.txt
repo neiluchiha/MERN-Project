@@ -12,3 +12,9 @@
    viii)"components" folder created under "user" folder
    ix)"ProtectedRoutesComponents.js" file created & authentication code added.
    x) <outlet> - Routes added between <ProtectedRoutesComponents> are called Outlet.
+
+
+3)Home Page: No page refresh after on logo click
+install react-router-bootstrap
+import {LinkContainer}
+use LinkContainer in menu
