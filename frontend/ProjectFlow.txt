@@ -14,7 +14,15 @@
    x) <outlet> - Routes added between <ProtectedRoutesComponents> are called Outlet.
 
 
-3)Home Page: No page refresh after on logo click
+3)Home Page:Header- No page refresh after on logo click
 install react-router-bootstrap
 import {LinkContainer}
 use LinkContainer in menu
+<!-------------------------------------------------------------------->
+<>Home Page:Header- Search Icon
+install bootstrap-icons
+import bootstrap-icons/font/bootstrap-icons.css on index.js page
+use <i className='bi bi-search text-dark'></i> in menu
+
+<>HomePage:Admin tab with red icon for unread message
+<>Cart icon, login, profile and register link
