@@ -25,6 +25,7 @@ import AdminChatsPage from "./pages/admin/AdminChatsPage";
 import AdminCreateProductPage from "./pages/admin/AdminCreateProductPage";
 import AdminEditProductPage from "./pages/admin/AdminEditProductPage";
 import AdminEditUserPage from "./pages/admin/AdminEditUserPage";
+import AdminOrderPage from './pages/admin/AdminOrderPage';
 import AdminOrderDetailsPage from "./pages/admin/AdminOrderDetailsPage";
 import AdminProductsPage from "./pages/admin/AdminProductsPage";
 import AdminUsersPage from "./pages/admin/AdminUsersPage";
@@ -62,6 +63,7 @@ function App() {
     <Route path="/admin/create-new-product" element={<AdminCreateProductPage/>}/>
     <Route path="/admin/edit-product" element={<AdminEditProductPage/>}/>
     <Route path="/admin/edit-user" element={<AdminEditUserPage/>}/>
+    <Route path="/admin/orders" element={<AdminOrderPage/>}/>
     <Route path="/admin/order-details" element={<AdminOrderDetailsPage/>}/>
     <Route path="/admin/products" element={<AdminProductsPage/>} />
     <Route path="/admin/users" element={<AdminUsersPage/>} />
