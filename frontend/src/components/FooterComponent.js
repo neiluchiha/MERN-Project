@@ -3,11 +3,13 @@ import {Container, Row, Col} from 'react-bootstrap';
 
 const FooterComponent = () =>{
     return (
-        <Container fluid>
-      <Row>
-        <Col>Copyright 2022</Col>
+    <footer>
+      <Container fluid>
+      <Row className="mt-5">
+        <Col className="bg-dark text-center text-light py-5">Copyright 2023</Col>
       </Row>
     </Container>
+    </footer>
     )
     
     }
