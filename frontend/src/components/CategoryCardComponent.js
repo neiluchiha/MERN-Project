@@ -18,7 +18,7 @@ const CategoryCardComponent = ({category, idx}) =>{
     <Card >
       <Card.Img 
       variant="top" 
-      crossorgin="anonymous"
+      crossOrigin="anonymous"
       src={images[idx]} 
       />
       <Card.Body>
